@@ -9,6 +9,11 @@ const PORT = process.env.PORT || 8000;
 // require mongoose
 require("./src/config/mongoose");
 
+const allowedOrigins = [
+  "https://sabaembroidery.render.com",
+  "http://localhost:3000",
+];
+
 // routes
 const { auth, categories, items, orders } = require("./src/routes");
 
@@ -16,8 +21,8 @@ const { auth, categories, items, orders } = require("./src/routes");
 app.use(morgan("tiny"));
 app.use(
   cors({
-    origin: "https://sabaembroidery.render.com",
-    methods: ["GET", "POST"],
+    origin: allowedOrigins,
+    methods: ["GET", "POST", "DELETE", "PUT"],
   })
 );
 app.use(
