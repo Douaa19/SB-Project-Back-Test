@@ -10,7 +10,7 @@ const PORT = process.env.PORT || 8000;
 require("./src/config/mongoose");
 
 const allowedOrigins = [
-  "https://sabaembroidery.onrender.com",
+  "https://sabaembroidery.render.com",
   "http://localhost:3000",
   "http://localhost:10000",
 ];
