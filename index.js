@@ -14,9 +14,6 @@ const allowedOrigins = [
   "http://localhost:3000",
 ];
 
-// routes
-const { auth, categories, items, orders } = require("./src/routes");
-
 // meddlewares
 app.use(morgan("tiny"));
 app.use(
@@ -32,12 +29,12 @@ app.use(
 );
 app.use(express.json());
 
-// app.use(routes);
+app.use(routes);
 
 // use routes
 
 app.listen(PORT, () => {
-  console.log(`http://localhost:${PORT}`);
+  console.log(`http://localhost:${PORT}/api`);
 });
 
 module.exports = app;

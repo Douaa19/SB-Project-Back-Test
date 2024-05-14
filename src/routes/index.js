@@ -7,7 +7,7 @@ const orders = require("./ordersRoutes");
 const categories = require("./categoriesRoutes");
 const users = require("./usersRoutes");
 
-app.get("/api", (req, res) => {
+app.get("/", (req, res) => {
   res.json({
     message: "Welcom to Saba Embroidery",
   });
