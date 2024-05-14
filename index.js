@@ -12,7 +12,6 @@ require("./src/config/mongoose");
 const allowedOrigins = [
   "https://sabaembroidery.onrender.com",
   "http://localhost:3000",
-  "http://localhost:10000",
 ];
 
 // routes
@@ -33,7 +32,7 @@ app.use(
 );
 app.use(express.json());
 
-app.use(routes);
+// app.use(routes);
 
 // use routes
 
