@@ -13,10 +13,10 @@ app.get("/", (req, res) => {
   });
 });
 
-app.use("/api/auth", auth);
-app.use("/api/categories", categories);
-app.use("/api/items", items);
-app.use("/api/orders", orders);
-app.use("/api/user", users);
+app.use("/auth", auth);
+app.use("/categories", categories);
+app.use("/items", items);
+app.use("/orders", orders);
+app.use("/user", users);
 
 module.exports = app;
